@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import { Layout, Image, SEO, Jumbo } from '../components';
+import { Image, SEO, Jumbo } from '../components';
 
 export const query = graphql`
   query GET_DESCRIPTION {
