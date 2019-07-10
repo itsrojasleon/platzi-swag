@@ -11,7 +11,7 @@ export default function thanks() {
         <h2>Successful purchase</h2>
         <p>I hope you enjoy with your swag</p>
         <p>Never stop learning</p>
-        <span rol='img' aria-label='emoji'>
+        <span role='img' aria-label='emoji'>
           ❤️
         </span>
         <Link>
