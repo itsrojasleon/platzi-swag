@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
-import { Image, SEO, Jumbo } from '../components';
+import { SEO, Jumbo } from '../components';
+import styled from 'styled-components';
 
 export const query = graphql`
   query GET_DESCRIPTION {
@@ -17,17 +18,19 @@ export const query = graphql`
   }
 `;
 
+const Button = styled.button`
+  width: 4rem;
+  background-color: #98ca3f;
+  border: none;
+  border-radius: 10px;
+  color: ${props => props.color};
+`;
+
 const IndexPage = ({ data }) => (
   <>
     <SEO title='Home' />
     <Jumbo description={data.allSite.edges[0].node.siteMetadata.description} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to='/thanks'>Go to page 2</Link>
+    <Button color='white'>Buy</Button>
   </>
 );
 
