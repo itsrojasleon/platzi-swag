@@ -8,10 +8,11 @@
 const React = require('react');
 const Layout = require('./src/components/layout').default;
 const { GlobalStyles } = require('./src/styles');
+const { CartProvider } = require('./src/contexts/CartContext');
 
 exports.wrapRootElement = ({ element }) => (
-  <React.Fragment>
+  <CartProvider>
     <GlobalStyles />
     <Layout>{element}</Layout>
-  </React.Fragment>
+  </CartProvider>
 );
