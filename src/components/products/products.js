@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import priceFormat from '../utils/priceFormat';
-import { StyledProducts } from '../styles/components';
+import priceFormat from '../../utils/priceFormat';
+import { StyledProducts } from '../../styles/components';
 
 export default function Products({ products }) {
   return (
