@@ -20,7 +20,7 @@ const Header = () => {
             <a href='https://platzi.com'>Platzi</a>
           </MenuItem>
           <MenuItem>
-            <Link to='/'>
+            <Link to='/cart'>
               <span>
                 <img src='https://i.postimg.cc/L6wpMxLt/cart.png' alt='cart' />
                 {cart.length}
