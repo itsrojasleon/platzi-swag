@@ -5,10 +5,11 @@ import {
   SizeButton,
   // QtyButton,
   SizeSelect,
+  Button,
   StyledProductDetail,
   QtySelect,
 } from '../../styles/components';
-import { SEO } from '../../components';
+import { SEO, Stars } from '../../components';
 
 export default function productDetails({
   price,
@@ -26,6 +27,9 @@ export default function productDetails({
         <Tag>Pupular</Tag>
         <h2>{name}</h2>
         <b>USD {newPrice}</b>
+        <Stars />
+        {metadata.wear && <h3>Color: blue</h3>}
+        <small>{metadata.description}</small>
         {metadata.wear && (
           <SizeSelect selecetd={size}>
             <SizeButton onClick={() => setSize(1)}>XS</SizeButton>
@@ -40,6 +44,7 @@ export default function productDetails({
           <input type='text' disabled value={qty} />
           <button onClick={() => setQty(qty + 1)}>+</button>
         </QtySelect>
+        <Button>Add to cart</Button>
       </div>
     </StyledProductDetail>
   );

@@ -5,3 +5,4 @@ export { default as Image } from './image';
 export { default as Jumbo } from './jumbo';
 export { default as Products } from './products/products';
 export { default as ProductDetails } from './products/productDetails';
+export { default as Stars } from './stars';
